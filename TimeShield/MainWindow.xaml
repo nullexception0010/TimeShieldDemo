@@ -1,0 +1,118 @@
+﻿<Window x:Class="TimeShield.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeShield"
+        mc:Ignorable="d"
+        Title="TimeShield" 
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/background.png"/>
+        </Grid.Background>
+
+        <Image 
+            Height="150" 
+            Width="150" 
+            Source="Resources/Logo.png" 
+            Margin="300,17,300,217"/>
+
+        <!-- Website Blocking -->
+        
+        <Button 
+            x:Name="BlockWebsitesButton" 
+            Content="Block Website" 
+            Height="30" Width="100" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,220,0,0"
+            Click="BlockWebsites"/>
+
+        <Button 
+            x:Name="UnblockWebsitesButton" 
+            Content="Unblock Website" 
+            Height="30" Width="100" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,260,0,0"
+            Click="UnblockWebsites"/>
+
+        <TextBox 
+            x:Name="Website"
+            TextWrapping="Wrap" 
+            Text="youtube.com" 
+            Width="150" Height="20"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,190,0,0"/>
+
+        <Label 
+            Content="Website to block:"
+            Width="150" Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,160,0,0"/>
+
+        <!-- App Blocking -->
+
+        <Button 
+            x:Name="AddAppsButton" 
+            Content="Add App" 
+            Height="30" Width="100" 
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,220,50,0"
+            Click="AddApp"/>
+
+        <Button 
+            x:Name="BlockAppsButton" 
+            Content="Block Apps" 
+            Height="30" Width="100" 
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,260,50,0"
+            Click="BlockApps"/>
+
+        <Button 
+            x:Name="UnblockAppsButton" 
+            Content="Unblock Apps" 
+            Height="30" Width="100" 
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,300,50,0"
+            Click="UnblockApps"/>
+
+        <Button 
+            x:Name="ClearBlockedAppsList" 
+            Content="Clear App List" 
+            Height="30" Width="100" 
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,340,50,0"
+            Click="ClearAppList"/>
+
+        <TextBox 
+            x:Name="App"
+            TextWrapping="Wrap" 
+            Text="Discord" 
+            Width="150" Height="20"
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,190,50,0"/>
+
+        <Label 
+            x:Name="BlockLabel"
+            Content="App to block:"
+            Width="150" Height="30"
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Margin="0,160,50,0"/>
+
+
+
+
+
+    </Grid>
+</Window>
